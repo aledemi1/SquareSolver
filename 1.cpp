@@ -58,9 +58,10 @@ int main(void)
         else
         {
          ans1 = (float) (- b  + pow(D, 1 / 2.0)) / (2 * a);
-         ans2 = (float) (- b  + pow(D, 1 / 2.0)) / (2 * a);
+         ans2 = (float) (- b  - pow(D, 1 / 2.0)) / (2 * a);
 
-         printf("Решения этого уравнения: %f и %f", ans1, ans2);
+         printf("Решения этого уравнения: %f ", ans1);
+         printf(" и %f", ans2);
 
         }
 
