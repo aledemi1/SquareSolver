@@ -9,7 +9,7 @@ int main(void)
     float ans1;
     float ans2;
 
-    printf("Вас приветсвует программа для решения квадратных уравнений \n");
+    printf("Вас приветсвует программа для поиска решений квадратных уравнений \n");
 
     printf("Квадратное уравнение имеет вид: \n");
 
@@ -45,7 +45,33 @@ int main(void)
 
         if (D<0)
         {
-         printf("Решений нет!");
+            printf("Вещественных корней нет! \n");
+            printf("Но есть комплексные \n");
+            float ans1_comp;
+            float ans2_comp;
+            ans1 = (float) - b / (2*a);
+            ans2 = ans1;
+
+            ans1_comp = (float) sqrt(-D)/(2*a);
+            ans2_comp = - ans1_comp;
+
+            if (ans1 >= 0 and ans1 <= 0)
+                printf("Комплексный корень: ");
+            else
+                printf("Комплексный корень: %f", ans1);
+            if (ans1_comp < 0)
+                printf(" %f i", ans1_comp);
+            else
+                printf(" + %f i \n", ans1_comp);
+
+            if (ans2 >= 0 and ans2 <= 0)
+                printf("Второй комплексный корень: ");
+            else
+                printf("Второй комплексный корень: %f", ans2);
+            if (ans2_comp < 0)
+                printf(" %f i", ans2_comp);
+            else
+                printf(" + %f i", ans2_comp);
 
         }
 
@@ -61,7 +87,7 @@ int main(void)
          ans2 = (float) (- b  - pow(D, 1 / 2.0)) / (2 * a);
 
          printf("Решения этого уравнения: %f ", ans1);
-         printf(" и %f", ans2);
+         printf(" и  %f", ans2);
 
         }
 
