@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <TXLib.h>
 #include <math.h>
+
 int main(void)
 {
-    float a;
-    float b;
-    float c;
+    float a = INFINITY;  /* задаём такое значение чтобы отличить его от нормального*/
+    float b = INFINITY;
+    float c = INFINITY;
     float ans1;
     float ans2;
 
@@ -15,16 +16,14 @@ int main(void)
 
     printf("ax^2 + bx + c = 0 \n");
 
-    printf("Введиете коэффицент a \n");
-    scanf("%f", &a);
+    while(isfinite(a) == 0 or isfinite(b) == 0 or isfinite(c) == 0)  /* проверка на верный ввод(проверяем, что вводят числа) */
+    {
+        fflush(stdin);
+        printf("Введиете коэффиценты a b c через пробел \n");
+        scanf("%f %f %f", &a, &b, &c);
+    }
 
-    printf("Введиете коэффицент b \n");
-    scanf("%f", &b);
-
-    printf("Введиете коэффицент c \n");
-    scanf("%f", &c);
-
-    if (a >= 0.0 and a <= 0.0 and b >= 0.0 and b <= 0.0)
+    if (a >= 0.0 and a <= 0.0 and b >= 0.0 and b <= 0.0)    /* проверка на вариант 0x^2 + 0x + 7 = 0 */
     {
         printf("Сработала защита от дурака");
     }
@@ -33,7 +32,7 @@ int main(void)
     else if(a >= 0.0 and a <= 0.0)
     {
         if (c <= 0 and c>=0)
-            printf("Ответ 0, это же очевидно!");
+            printf("Ответ 0, это же очевидно!"); /* проверка на вариант 0x^2 + 7x + 0 = 0 => 7x = 0 => x= 0*/
         else
         {
             printf("Это уравнение является линейным, а не квадратным \n");
@@ -61,9 +60,9 @@ int main(void)
             ans2_comp = - ans1_comp;
 
             if (ans1 >= 0 and ans1 <= 0)
-                printf("Комплексный корень: ");
+                printf("Первый комплексный корень: ");
             else
-                printf("Комплексный корень: %f", ans1);
+                printf("Первый комплексный корень: %f", ans1);
             if (ans1_comp < 0)
                 printf(" %f i", ans1_comp);
             else
