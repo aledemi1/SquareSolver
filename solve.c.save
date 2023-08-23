@@ -1,0 +1,45 @@
+
+
+int solve(float a, float b, float c, float* ans1_address, float* ans2_address)
+{
+    if (check_that_number_is_zero(a))
+    {
+        if (check_that_number_is_zero(b))
+        {
+            return 0;
+
+        }
+
+        else
+        {
+            *ans1_address = (float) (- c) / b;
+            if (check_that_number_is_zero(*ans1_address))
+                *ans1_address = 0;
+            return 1;
+        }
+    }
+
+    float D = b*b - 4*a*c;
+
+    if (D<0)
+    {
+        return 0;
+    }
+    else if(D>0)
+    {
+        *ans1_address = (float) (-b + sqrt(D)) / (2*a);
+        *ans2_address = (float) (-b - sqrt(D)) / (2*a);
+        if (check_that_number_is_zero(*ans1_address))
+                *ans1_address = 0;
+        if (check_that_number_is_zero(*ans2_address))
+                *ans2_address = 0;
+        return 2;
+    }
+    else
+    {
+        *ans1_address = (-b) / (2*a);
+        if (check_that_number_is_zero(*ans1_address))
+                *ans1_address = 0;
+        return 1;
+    }
+}

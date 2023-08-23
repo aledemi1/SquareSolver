@@ -1,0 +1,8 @@
+#include <math.h>
+#include "input_of_quadratic_equation_coefficients.h"
+#include "solve.h"
+
+int main(void)
+{
+
+}

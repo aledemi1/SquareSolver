@@ -1,12 +1,18 @@
 #include <stdio.h>
 #include <TXLib.h>
 #include <math.h>
-
+#include <input_of_quadratic_equation_coefficients.h>
 // TODO: split this in multiple files by purpose!
 
 void input_of_quadratic_equation_coefficients(float* a_address, float* b_address, float* c_address);
 
-int solve(float a, float b , float c, float* ans1_address, float* ans2_address, int* nomber_of_roots);
+void agree_test();
+
+int not_equal_numbers(float num1, float num2);
+
+int Test_solve(float a, float b, float c, float ans1_ref, float ans2_ref, int nomber_of_roots_ref);
+
+int solve(float a, float b , float c, float* ans1_address, float* ans2_address);
 
 void print_welcome_message();
 
@@ -16,8 +22,10 @@ int print_answer(int nomber_of_roots, float ans1, float ans2);
 
 int main(void)
 {
-
     print_welcome_message(); //приветсвие
+
+    agree_test();
+
 
     float a = NAN;  /* инициализация переменных*/
     float b = NAN;
@@ -30,49 +38,11 @@ int main(void)
 
     int nomber_of_roots = NAN;
 
-    solve(a,b,c, &ans1, &ans2, &nomber_of_roots);   //решение
+    nomber_of_roots = solve(a,b,c, &ans1, &ans2);   //решение
 
     print_answer(nomber_of_roots, ans1, ans2);   //вывод ответа
 
     return 0;
-}
-
-void input_of_quadratic_equation_coefficients(float* a_address, float* b_address, float* c_address)
-{
-
-    while(isfinite(*a_address) == 0 || isfinite(*b_address) == 0 || isfinite(*c_address) == 0)  /*проверка на верный ввод(проверяем, что вводят числа)*/
-    {
-        printf("Введите коэффицент a \n");
-        char str_before_check[80];
-        gets(str_before_checkss);
-        int norm_char = 0;
-        char str_after_check[80];
-            for (int i = 0, i < strlen(str_before_check), i++)
-            {
-                if (str_before_check[i] >='0' & str_before_check[i]<='9' || str_before_check[i] == '.' || str_before_check[i] == ' ')
-                {
-                        str_after_check[n] = str_before_check[i];
-                        n++;
-                }
-            }
-        
-        
-        
-        
-        
-        
-
-
-
-
-
-
-
-
-        /*fflush(stdin); // TODO: Don't do this*/
-
-        /*scanf("%f %f %f", a_address, b_address, c_address);*/
-    }
 }
 
 int check_that_number_is_zero(float num)
@@ -81,13 +51,12 @@ int check_that_number_is_zero(float num)
     return((num + allowable_comparison_error > 0) & (num - allowable_comparison_error < 0));
 }
 
-int solve(float a, float b, float c, float* ans1_address, float* ans2_address, int* nomber_of_roots)
+int solve(float a, float b, float c, float* ans1_address, float* ans2_address)
 {
     if (check_that_number_is_zero(a))
     {
         if (check_that_number_is_zero(b))
         {
-            *nomber_of_roots = 10;
             return 0;
 
         }
@@ -97,8 +66,7 @@ int solve(float a, float b, float c, float* ans1_address, float* ans2_address, i
             *ans1_address = (float) (- c) / b;
             if (check_that_number_is_zero(*ans1_address))
                 *ans1_address = 0;
-            *nomber_of_roots = 1;
-            return 0;
+            return 1;
         }
     }
 
@@ -106,7 +74,6 @@ int solve(float a, float b, float c, float* ans1_address, float* ans2_address, i
 
     if (D<0)
     {
-        *nomber_of_roots = 0;
         return 0;
     }
     else if(D>0)
@@ -117,16 +84,14 @@ int solve(float a, float b, float c, float* ans1_address, float* ans2_address, i
                 *ans1_address = 0;
         if (check_that_number_is_zero(*ans2_address))
                 *ans2_address = 0;
-        *nomber_of_roots = 2;
-        return 0;
+        return 2;
     }
     else
     {
         *ans1_address = (-b) / (2*a);
         if (check_that_number_is_zero(*ans1_address))
                 *ans1_address = 0;
-        *nomber_of_roots = 1;
-        return 0;
+        return 1;
     }
 }
 
@@ -171,4 +136,70 @@ int print_answer(int nomber_of_roots, float ans1, float ans2 )
     }
 
     return 0;
+}
+void input_of_quadratic_equation_coefficients(float* a_address, float* b_address, float* c_address)
+{
+
+    while(isfinite(*a_address) == 0 || isfinite(*b_address) == 0 || isfinite(*c_address) == 0)  /*проверка на верный ввод(проверяем, что вводят числа)*/
+    {
+
+        printf("Введите коэффиценты a b c \n");
+        scanf("%f%f%f", a_address, b_address, c_address);
+        while (getchar() != '\n');
+
+    }
+}
+
+int Test_solve(float a, float b, float c, float ans1_ref, float ans2_ref, int nomber_of_roots_ref)
+{
+    float ans1 = 0;
+    float ans2 = 0;
+
+    int nomber_of_roots = solve(a,b,c, &ans1, &ans2);
+
+    if (not_equal_numbers(ans1, ans1_ref) ||  not_equal_numbers(ans2, ans2_ref) || nomber_of_roots != nomber_of_roots_ref)
+    {
+        printf("Ошибка при решении квадратного уравнения. Получено: ans1=%f, ans2=%f, nomber_of_roots = %d. \nОжидалось: ans1_ref=%f, ans2_ref=%f, nomber_of_roots_ref=%d \n", ans1, ans2, nomber_of_roots, ans1_ref, ans2_ref, nomber_of_roots_ref);
+        return 0;
+
+    }
+    else
+    {
+        printf("Тест пройден \n");
+        return 1;
+    }
+
+}
+
+
+int not_equal_numbers(float num1, float num2)
+{
+    const float allowable_comparison_error = (float) 0.0001;
+
+    return !(num1 - num2 <= allowable_comparison_error || num2 - num1 <= allowable_comparison_error);
+
+}
+
+void agree_test()
+{
+    printf("Хотите провести тест перед работай программы? \n Введите 1, если согласны или любой другой символ, если нет \n");
+    char agree = '0';
+    scanf("%c", &agree);
+    if (agree == '1')
+        {
+            int number_of_passed_test = 0;
+            number_of_passed_test += Test_solve(1, 1, 1, 0, 0, 0);
+            number_of_passed_test += Test_solve(1, 2, 1, -1, 0, 1);
+            number_of_passed_test += Test_solve(1, 0, -1, 1, -1, 2);
+            number_of_passed_test += Test_solve(1, 1, 1, 0, 0, 0);
+
+            if (number_of_passed_test == 4)
+                printf("Все тесты пройдены успешно \n");
+            else
+            {
+                printf("Не все тесты были пройдены успешно, пользуйтесь программой на ваш страх и риск \n");
+            }
+
+        }
+
 }
