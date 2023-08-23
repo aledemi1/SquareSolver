@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <TXLib.h>
 #include <math.h>
-#include <input_of_quadratic_equation_coefficients.h>
+#include "input_of_quadratic_equation_coefficients.cpp"
+#include "solve.cpp"
+#include "print_answer.cpp"
 // TODO: split this in multiple files by purpose!
 
-void input_of_quadratic_equation_coefficients(float* a_address, float* b_address, float* c_address);
+//void input_of_quadratic_equation_coefficients(float* a_address, float* b_address, float* c_address);
 
 void agree_test();
 
@@ -12,20 +14,17 @@ int not_equal_numbers(float num1, float num2);
 
 int Test_solve(float a, float b, float c, float ans1_ref, float ans2_ref, int nomber_of_roots_ref);
 
-int solve(float a, float b , float c, float* ans1_address, float* ans2_address);
+//int solve(float a, float b , float c, float* ans1_address, float* ans2_address);
 
 void print_welcome_message();
 
-int check_that_number_is_zero(float num);
+// check_that_number_is_zero(float num);
 
-int print_answer(int nomber_of_roots, float ans1, float ans2);
+//int print_answer(int nomber_of_roots, float ans1, float ans2);
 
 int main(void)
 {
     print_welcome_message(); //приветсвие
-
-    agree_test();
-
 
     float a = NAN;  /* инициализация переменных*/
     float b = NAN;
@@ -45,13 +44,13 @@ int main(void)
     return 0;
 }
 
-int check_that_number_is_zero(float num)
+/*int check_that_number_is_zero(float num)
 {
     const float allowable_comparison_error = (float) 0.0001;  //допустимая погрешность при сравнении
     return((num + allowable_comparison_error > 0) & (num - allowable_comparison_error < 0));
-}
+} */
 
-int solve(float a, float b, float c, float* ans1_address, float* ans2_address)
+/*int solve(float a, float b, float c, float* ans1_address, float* ans2_address)
 {
     if (check_that_number_is_zero(a))
     {
@@ -94,7 +93,7 @@ int solve(float a, float b, float c, float* ans1_address, float* ans2_address)
         return 1;
     }
 }
-
+ */
 void print_welcome_message()
 {
     printf("Вас приветсвует программа для поиска решений квадратных уравнений \n");
@@ -104,7 +103,7 @@ void print_welcome_message()
     printf("ax^2 + bx + c = 0 \n");
 }
 
-int print_answer(int nomber_of_roots, float ans1, float ans2 )
+/*int print_answer(int nomber_of_roots, float ans1, float ans2 )
 {
     switch(nomber_of_roots)
     {
@@ -136,11 +135,12 @@ int print_answer(int nomber_of_roots, float ans1, float ans2 )
     }
 
     return 0;
-}
+} */
+/*
 void input_of_quadratic_equation_coefficients(float* a_address, float* b_address, float* c_address)
 {
 
-    while(isfinite(*a_address) == 0 || isfinite(*b_address) == 0 || isfinite(*c_address) == 0)  /*проверка на верный ввод(проверяем, что вводят числа)*/
+    while(isfinite(*a_address) == 0 || isfinite(*b_address) == 0 || isfinite(*c_address) == 0)
     {
 
         printf("Введите коэффиценты a b c \n");
@@ -149,57 +149,4 @@ void input_of_quadratic_equation_coefficients(float* a_address, float* b_address
 
     }
 }
-
-int Test_solve(float a, float b, float c, float ans1_ref, float ans2_ref, int nomber_of_roots_ref)
-{
-    float ans1 = 0;
-    float ans2 = 0;
-
-    int nomber_of_roots = solve(a,b,c, &ans1, &ans2);
-
-    if (not_equal_numbers(ans1, ans1_ref) ||  not_equal_numbers(ans2, ans2_ref) || nomber_of_roots != nomber_of_roots_ref)
-    {
-        printf("Ошибка при решении квадратного уравнения. Получено: ans1=%f, ans2=%f, nomber_of_roots = %d. \nОжидалось: ans1_ref=%f, ans2_ref=%f, nomber_of_roots_ref=%d \n", ans1, ans2, nomber_of_roots, ans1_ref, ans2_ref, nomber_of_roots_ref);
-        return 0;
-
-    }
-    else
-    {
-        printf("Тест пройден \n");
-        return 1;
-    }
-
-}
-
-
-int not_equal_numbers(float num1, float num2)
-{
-    const float allowable_comparison_error = (float) 0.0001;
-
-    return !(num1 - num2 <= allowable_comparison_error || num2 - num1 <= allowable_comparison_error);
-
-}
-
-void agree_test()
-{
-    printf("Хотите провести тест перед работай программы? \n Введите 1, если согласны или любой другой символ, если нет \n");
-    char agree = '0';
-    scanf("%c", &agree);
-    if (agree == '1')
-        {
-            int number_of_passed_test = 0;
-            number_of_passed_test += Test_solve(1, 1, 1, 0, 0, 0);
-            number_of_passed_test += Test_solve(1, 2, 1, -1, 0, 1);
-            number_of_passed_test += Test_solve(1, 0, -1, 1, -1, 2);
-            number_of_passed_test += Test_solve(1, 1, 1, 0, 0, 0);
-
-            if (number_of_passed_test == 4)
-                printf("Все тесты пройдены успешно \n");
-            else
-            {
-                printf("Не все тесты были пройдены успешно, пользуйтесь программой на ваш страх и риск \n");
-            }
-
-        }
-
-}
+*/

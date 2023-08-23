@@ -1,5 +1,6 @@
 #include <math.h>
 #include <stdio.h>
+#include <TXLib.h>
 #include "solve.h"
 
 int Test_solve(float a, float b, float c, float ans1_ref, float ans2_ref, int nomber_of_roots_ref);
@@ -13,7 +14,7 @@ int main(void)
     number_of_passed_test += Test_solve(1, 2, 1, -1, 0, 1);
     number_of_passed_test += Test_solve(1, 0, -1, 1, -1, 2);
     number_of_passed_test += Test_solve(1, 1, 1, 0, 0, 0);
-    number_of_passed_test += Test_solve(4, 4, 1, 0.5, -0.5, 2);
+    number_of_passed_test += Test_solve(4, 4, 1, -0.5, 0, 1);
 
     if (number_of_passed_test == 5)
         printf("Все тесты пройдены успешно \n");

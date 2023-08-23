@@ -1,4 +1,5 @@
 #include <math.h>
+#include <assert.h>
 int check_that_number_is_zero(float num);
 int solve(float a, float b, float c, float* ans1_address, float* ans2_address);
 
@@ -43,12 +44,17 @@ int solve(float a, float b, float c, float* ans1_address, float* ans2_address)
                 *ans2_address = 0;
         return 2;
     }
-    else
+    else if(check_that_number_is_zero(D))
     {
         *ans1_address = (-b) / (2*a);
         if (check_that_number_is_zero(*ans1_address))
                 *ans1_address = 0;
         return 1;
+    }
+    else
+    {
+        assert(0);
+        return 0;
     }
 }
 

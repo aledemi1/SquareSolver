@@ -4,23 +4,8 @@
 #include "input_of_quadratic_equation_coefficients.h"
 #include "solve.h"
 #include "print_answer.h"
-// TODO: split this in multiple files by purpose!
-
-//void input_of_quadratic_equation_coefficients(float* a_address, float* b_address, float* c_address);
-
-void agree_test();
-
-int not_equal_numbers(float num1, float num2);
-
-int Test_solve(float a, float b, float c, float ans1_ref, float ans2_ref, int nomber_of_roots_ref);
-
-//int solve(float a, float b , float c, float* ans1_address, float* ans2_address);
 
 void print_welcome_message();
-
-// check_that_number_is_zero(float num);
-
-//int print_answer(int nomber_of_roots, float ans1, float ans2);
 
 int main(void)
 {
@@ -35,7 +20,7 @@ int main(void)
     float ans1 = NAN;
     float ans2 = NAN;
 
-    int nomber_of_roots = NAN;
+    int nomber_of_roots = NAN; //количество корней
 
     nomber_of_roots = solve(a,b,c, &ans1, &ans2);   //решение
 
@@ -44,56 +29,6 @@ int main(void)
     return 0;
 }
 
-/*int check_that_number_is_zero(float num)
-{
-    const float allowable_comparison_error = (float) 0.0001;  //допустимая погрешность при сравнении
-    return((num + allowable_comparison_error > 0) & (num - allowable_comparison_error < 0));
-} */
-
-/*int solve(float a, float b, float c, float* ans1_address, float* ans2_address)
-{
-    if (check_that_number_is_zero(a))
-    {
-        if (check_that_number_is_zero(b))
-        {
-            return 0;
-
-        }
-
-        else
-        {
-            *ans1_address = (float) (- c) / b;
-            if (check_that_number_is_zero(*ans1_address))
-                *ans1_address = 0;
-            return 1;
-        }
-    }
-
-    float D = b*b - 4*a*c;
-
-    if (D<0)
-    {
-        return 0;
-    }
-    else if(D>0)
-    {
-        *ans1_address = (float) (-b + sqrt(D)) / (2*a);
-        *ans2_address = (float) (-b - sqrt(D)) / (2*a);
-        if (check_that_number_is_zero(*ans1_address))
-                *ans1_address = 0;
-        if (check_that_number_is_zero(*ans2_address))
-                *ans2_address = 0;
-        return 2;
-    }
-    else
-    {
-        *ans1_address = (-b) / (2*a);
-        if (check_that_number_is_zero(*ans1_address))
-                *ans1_address = 0;
-        return 1;
-    }
-}
- */
 void print_welcome_message()
 {
     printf("Вас приветсвует программа для поиска решений квадратных уравнений \n");
@@ -103,50 +38,5 @@ void print_welcome_message()
     printf("ax^2 + bx + c = 0 \n");
 }
 
-/*int print_answer(int nomber_of_roots, float ans1, float ans2 )
-{
-    switch(nomber_of_roots)
-    {
 
-    case 0:
-    {
-        printf("Отсутствуют вещественные корни");
-        break;
-    }
 
-    case 1:
-    {
-        printf("Единственный корень %f", ans1);
-        break;
-    }
-
-    case 2:
-    {
-        printf("Первый корень %f \n", ans1);
-        printf("Второй корень %f", ans2);
-        break;
-    }
-    default:
-    {
-        printf("Ошибка!");
-        assert(0);
-        break;
-    }
-    }
-
-    return 0;
-} */
-/*
-void input_of_quadratic_equation_coefficients(float* a_address, float* b_address, float* c_address)
-{
-
-    while(isfinite(*a_address) == 0 || isfinite(*b_address) == 0 || isfinite(*c_address) == 0)
-    {
-
-        printf("Введите коэффиценты a b c \n");
-        scanf("%f%f%f", a_address, b_address, c_address);
-        while (getchar() != '\n');
-
-    }
-}
-*/
