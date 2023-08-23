@@ -4,7 +4,7 @@
 
 // TODO: split this in multiple files by purpose!
 
-void data_input(float* a_address, float* b_address, float* c_address);
+void input_of_quadratic_equation_coefficients(float* a_address, float* b_address, float* c_address);
 
 int solve(float a, float b , float c, float* ans1_address, float* ans2_address, int* nomber_of_roots);
 
@@ -23,7 +23,7 @@ int main(void)
     float b = NAN;
     float c = NAN;
 
-    data_input( &a, &b,  &c);  //ввод
+    input_of_quadratic_equation_coefficients( &a, &b,  &c);  //ввод
 
     float ans1 = NAN;
     float ans2 = NAN;
@@ -37,14 +37,16 @@ int main(void)
     return 0;
 }
 
-void data_input(float* a_address, float* b_address, float* c_address)
+void input_of_quadratic_equation_coefficients(float* a_address, float* b_address, float* c_address)
 {
 
     while(isfinite(*a_address) == 0 || isfinite(*b_address) == 0 || isfinite(*c_address) == 0)  /*проверка на верный ввод(проверяем, что вводят числа)*/
     {
-        fflush(stdin); // TODO: Don't do this
-        printf("Введиете коэффиценты a b c через пробел \n");
-        scanf("%f %f %f", a_address, b_address, c_address);
+
+        printf("Введите коэффиценты a b c \n");
+        scanf("%f%f%f", a_address, b_address, c_address);
+        while (getchar() != '\n');
+
     }
 }
 
@@ -137,7 +139,8 @@ int print_answer(int nomber_of_roots, float ans1, float ans2 )
     }
     default:
     {
-        printf("Ошибка!"); // TODO: read about asserts, can you apply here?
+        printf("Ошибка!");
+        assert(0);
         break;
     }
     }

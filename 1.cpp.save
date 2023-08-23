@@ -4,11 +4,11 @@
 
 // TODO: split this in multiple files by purpose!
 
-int data_input(float* a_address, float* b_address, float* c_address);
+void input_of_quadratic_equation_coefficients(float* a_address, float* b_address, float* c_address);
 
 int solve(float a, float b , float c, float* ans1_address, float* ans2_address, int* nomber_of_roots);
 
-int print_welcome_message();
+void print_welcome_message();
 
 int check_that_number_is_zero(float num);
 
@@ -23,7 +23,7 @@ int main(void)
     float b = NAN;
     float c = NAN;
 
-    data_input( &a, &b,  &c);  //ввод
+    input_of_quadratic_equation_coefficients( &a, &b,  &c);  //ввод
 
     float ans1 = NAN;
     float ans2 = NAN;
@@ -37,15 +37,42 @@ int main(void)
     return 0;
 }
 
-int data_input(float* a_address, float* b_address, float* c_address)
+void input_of_quadratic_equation_coefficients(float* a_address, float* b_address, float* c_address)
 {
-    while(isfinite(*a_address) == 0 or isfinite(*b_address) == 0 or isfinite(*c_address) == 0)  /*проверка на верный ввод(проверяем, что вводят числа)*/
-    {                      // TODO: ^~ is possible but not widely accepted, use ||
-        fflush(stdin); // TODO: Don't do this
-        printf("Введиете коэффиценты a b c через пробел \n");
-        scanf("%f %f %f", a_address, b_address, c_address);
+
+    while(isfinite(*a_address) == 0 || isfinite(*b_address) == 0 || isfinite(*c_address) == 0)  /*проверка на верный ввод(проверяем, что вводят числа)*/
+    {
+        printf("Введите коэффицент a \n");
+        char str_before_check[80];
+        gets(str_before_checkss);
+        int norm_char = 0;
+        char str_after_check[80];
+            for (int i = 0, i < strlen(str_before_check), i++)
+            {
+                if (str_before_check[i] >='0' & str_before_check[i]<='9' || str_before_check[i] == '.' || str_before_check[i] == ' ')
+                {
+                        str_after_check[n] = str_before_check[i];
+                        n++;
+                }
+            }
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+        /*fflush(stdin); // TODO: Don't do this*/
+
+        /*scanf("%f %f %f", a_address, b_address, c_address);*/
     }
-    return 0;  // TODO: return 0?
 }
 
 int check_that_number_is_zero(float num)
@@ -137,7 +164,8 @@ int print_answer(int nomber_of_roots, float ans1, float ans2 )
     }
     default:
     {
-        printf("Ошибка!"); // TODO: read about asserts, can you apply here?
+        printf("Ошибка!");
+        assert(0);
         break;
     }
     }
