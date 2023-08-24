@@ -92,7 +92,7 @@ int main(void)
 //! @see solve(), print_answer()
 //}-
 
-int Test_solve(float a, float b, float c, float ans1_ref, float ans2_ref, int nomber_of_roots_ref)
+int Test_solve(float a, float b, float c, float ans1_ref, float ans2_ref, int number_of_roots_ref)
 {
 
     float ans1 = 0;
@@ -100,9 +100,9 @@ int Test_solve(float a, float b, float c, float ans1_ref, float ans2_ref, int no
 
     int number_of_roots = solve(a,b,c, &ans1, &ans2);
 
-    if (not_equal_numbers(ans1, ans1_ref) ||  not_equal_numbers(ans2, ans2_ref) || number_of_roots != nomber_of_roots_ref) /// if the calculated roots do not correspond to known regular horses
+    if (not_equal_numbers(ans1, ans1_ref) ||  not_equal_numbers(ans2, ans2_ref) || number_of_roots != number_of_roots_ref) /// if the calculated roots do not correspond to known regular horses
     {
-        printf("Ошибка при решении квадратного уравнения. Получено: ans1=%f, ans2=%f, number_of_roots = %d. \nОжидалось: ans1_ref=%f, ans2_ref=%f, nomber_of_roots_ref=%d \n", ans1, ans2, nomber_of_roots, ans1_ref, ans2_ref, nomber_of_roots_ref);
+        printf("Ошибка при решении квадратного уравнения. Получено: ans1=%f, ans2=%f, number_of_roots = %d. \n Ожидалось: ans1_ref=%f, ans2_ref=%f, number_of_roots_ref=%d \n", ans1, ans2, number_of_roots, ans1_ref, ans2_ref, number_of_roots_ref);
         return 0;
 
     }
