@@ -1,0 +1,10 @@
+all: test
+
+test: test.o solve.o
+	g++ test.o solve.o -o result_test
+
+solve.o: solve.cpp
+	g++ -c solve.cpp
+
+clean:
+	rm -rf *.o test

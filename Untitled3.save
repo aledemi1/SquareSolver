@@ -1,1 +1,7 @@
-int solve(float a, float b , float c, float* ans1_address, float* ans2_address);
+all:
+
+result: 1.o print_answer.o solve.o input_of_quadratic_equation_coefficients.o
+    g++ 1.o print_answer.o solve.o input_of_quadratic_equation_coefficients.o -o result_main
+
+1.o: 1.cpp
+	g++ -c 1.cpp
