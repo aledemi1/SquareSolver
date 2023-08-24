@@ -49,12 +49,13 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac339eea1d3d7b0e374e04275422eb06f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="print__answer_8cpp.html#ac339eea1d3d7b0e374e04275422eb06f">print_answer</a> (int nomber_of_roots, float ans1, float ans2)</td></tr>
-<tr class="separator:ac339eea1d3d7b0e374e04275422eb06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a472b06c22e059446057250a0fa5b9414"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="print__answer_8cpp.html#a472b06c22e059446057250a0fa5b9414">print_answer</a> (int number_of_roots, float ans1, float ans2)</td></tr>
+<tr class="memdesc:a472b06c22e059446057250a0fa5b9414"><td class="mdescLeft">&#160;</td><td class="mdescRight">print correct answers or error  <br /></td></tr>
+<tr class="separator:a472b06c22e059446057250a0fa5b9414"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ac339eea1d3d7b0e374e04275422eb06f" name="ac339eea1d3d7b0e374e04275422eb06f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac339eea1d3d7b0e374e04275422eb06f">&#9670;&#160;</a></span>print_answer()</h2>
+<a id="a472b06c22e059446057250a0fa5b9414" name="a472b06c22e059446057250a0fa5b9414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a472b06c22e059446057250a0fa5b9414">&#9670;&#160;</a></span>print_answer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -63,7 +64,7 @@ Functions</h2></td></tr>
           <td class="memname">int print_answer </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>nomber_of_roots</em>, </td>
+          <td class="paramname"><em>number_of_roots</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -84,6 +85,61 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>print correct answers or error </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nomber_of_roots,first_answer,second_answer</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>print answer </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Operation logic: </dd>
+<dd>
+1 function get number of roots </dd>
+<dd>
+2 if numbers of roots = 0 then print it </dd>
+<dd>
+3 if numbers of roots = 1 then print correct answer </dd>
+<dd>
+4 if numbers of roots = 2 then print correct answers </dd>
+<dd>
+5 if another situation: ERROR!</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="print__answer_8cpp.html#a472b06c22e059446057250a0fa5b9414">print_answer</a>(<span class="keywordtype">int</span> number_of_roots, <span class="keywordtype">float</span> ans1, <span class="keywordtype">float</span> ans2 )</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">switch</span>(number_of_roots)</div>
+<div class="line">    {</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">case</span> 0:  </div>
+<div class="line">    {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;РћС‚СЃСѓС‚СЃС‚РІСѓСЋС‚ РІРµС‰РµСЃС‚РІРµРЅРЅС‹Рµ РєРѕСЂРЅРё&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">case</span> 1:</div>
+<div class="line">    {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Р•РґРёРЅСЃС‚РІРµРЅРЅС‹Р№ РєРѕСЂРµРЅСЊ %f&quot;</span>, ans1);</div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">case</span> 2:</div>
+<div class="line">    {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;РџРµСЂРІС‹Р№ РєРѕСЂРµРЅСЊ %f \n&quot;</span>, ans1);</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Р’С‚РѕСЂРѕР№ РєРѕСЂРµРЅСЊ %f&quot;</span>, ans2);</div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">default</span>:</div>
+<div class="line">    {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;РћС€РёР±РєР°!&quot;</span>);</div>
+<div class="line">        assert(0);</div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aprint__answer_8cpp_html_a472b06c22e059446057250a0fa5b9414"><div class="ttname"><a href="print__answer_8cpp.html#a472b06c22e059446057250a0fa5b9414">print_answer</a></div><div class="ttdeci">int print_answer(int nomber_of_roots, float ans1, float ans2)</div><div class="ttdoc">print correct answers or error</div><div class="ttdef"><b>Definition</b> print_answer.cpp:64</div></div>
+</div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd><a class="el" href="input__of__quadratic__equation__coefficients_8cpp.html#ac825b149088fa1269dd52c4b42f08d37" title="the user enters values until he enters them correctly">input_of_quadratic_equation_coefficients()</a>, <a class="el" href="solve_8cpp.html#a9f59095734decbe4388f4885bff4bb8d" title="function to solve a quadratic equation">solve()</a> </dd></dl>
 
 </div>
 </div>

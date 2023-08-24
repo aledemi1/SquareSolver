@@ -50,6 +50,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ac825b149088fa1269dd52c4b42f08d37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="input__of__quadratic__equation__coefficients_8h.html#ac825b149088fa1269dd52c4b42f08d37">input_of_quadratic_equation_coefficients</a> (float *a_address, float *b_address, float *c_address)</td></tr>
+<tr class="memdesc:ac825b149088fa1269dd52c4b42f08d37"><td class="mdescLeft">&#160;</td><td class="mdescRight">the user enters values until he enters them correctly  <br /></td></tr>
 <tr class="separator:ac825b149088fa1269dd52c4b42f08d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -84,6 +85,40 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>the user enters values until he enters them correctly </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a_address,b_address,c_address</td><td>(address of coefficients of the quadratic equation) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a, b, c coefficients of the quadratic equation </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Operation logic: </dd>
+<dd>
+1 start cycle(while coefficients of the quadratic equation have not correct values) </dd>
+<dd>
+2 user enter coefficients </dd>
+<dd>
+3 program read their and sets the value of the variables if the user enters them correctly </dd>
+<dd>
+4 line cleaning </dd>
+<dd>
+5 end cycle</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="input__of__quadratic__equation__coefficients_8cpp.html#ac825b149088fa1269dd52c4b42f08d37">input_of_quadratic_equation_coefficients</a>(<span class="keywordtype">float</span>* a_address, <span class="keywordtype">float</span>* b_address, <span class="keywordtype">float</span>* c_address)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">while</span>(isfinite(*a_address) == 0 || isfinite(*b_address) == 0 || isfinite(*c_address) == 0)  <span class="comment">/*РїСЂРѕРІРµСЂРєР° РЅР° РІРµСЂРЅС‹Р№ РІРІРѕРґ(РїСЂРѕРІРµСЂСЏРµРј, С‡С‚Рѕ РІРІРѕРґСЏС‚ С‡РёСЃР»Р°)*/</span></div>
+<div class="line">    {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Р’РІРµРґРёС‚Рµ РєРѕСЌС„С„РёС†РµРЅС‚С‹ a b c \n&quot;</span>);</div>
+<div class="line">        scanf(<span class="stringliteral">&quot;%f%f%f&quot;</span>, a_address, b_address, c_address);</div>
+<div class="line">       <span class="keywordflow">while</span> (getchar() != <span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"> </div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="ttc" id="ainput__of__quadratic__equation__coefficients_8cpp_html_ac825b149088fa1269dd52c4b42f08d37"><div class="ttname"><a href="input__of__quadratic__equation__coefficients_8cpp.html#ac825b149088fa1269dd52c4b42f08d37">input_of_quadratic_equation_coefficients</a></div><div class="ttdeci">void input_of_quadratic_equation_coefficients(float *a_address, float *b_address, float *c_address)</div><div class="ttdoc">the user enters values until he enters them correctly</div><div class="ttdef"><b>Definition</b> input_of_quadratic_equation_coefficients.cpp:40</div></div>
+</div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd><a class="el" href="solve_8cpp.html#a9f59095734decbe4388f4885bff4bb8d" title="function to solve a quadratic equation">solve()</a>, <a class="el" href="print__answer_8cpp.html#a472b06c22e059446057250a0fa5b9414" title="print correct answers or error">print_answer()</a> </dd></dl>
 
 </div>
 </div>

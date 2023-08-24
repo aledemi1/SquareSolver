@@ -50,6 +50,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a9f59095734decbe4388f4885bff4bb8d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solve_8h.html#a9f59095734decbe4388f4885bff4bb8d">solve</a> (float a, float b, float c, float *ans1_address, float *ans2_address)</td></tr>
+<tr class="memdesc:a9f59095734decbe4388f4885bff4bb8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to solve a quadratic equation  <br /></td></tr>
 <tr class="separator:a9f59095734decbe4388f4885bff4bb8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -96,6 +97,91 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function to solve a quadratic equation </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a,b,c</td><td>coefficients of the quadratic equation </td></tr>
+    <tr><td class="paramname">ans1_address,ans2_address</td><td>address of roots </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>roots </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Operation logic: </dd>
+<dd>
+1 determine the type of equation </dd>
+<dd>
+2 type: 0x^2 + 0x + c = 0 =&gt; return 0(numbers of roots) </dd>
+<dd>
+3 type: 0x^2 + bx + c = 0 (linear equation) =&gt; count answer = (-c)/b =&gt; checking that the answer is 0 =&gt;return 1(numbers of roots) </dd>
+<dd>
+4 type: ax^2 + bx + c = 0 =&gt; initialization and count the discriminant </dd>
+<dd>
+4.a if discriminant &lt; 0 =&gt; return 0(numbers of roots) due to the lack of real roots </dd>
+<dd>
+4.b if discriminant &gt; 0 =&gt; count roots = (-b +-sqrt(discriminant)) / (2*a) =&gt;checking that the answers is 0 =&gt;return 2(numbers of roots) </dd>
+<dd>
+4.c if discriminant = 0 =&gt; count root = ( -b ) / (2*a) =&gt; checking that the answers is 0 =&gt; return 1(numbers of roots) </dd>
+<dd>
+5 if another situation: ERROR!</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="solve_8cpp.html#a9f59095734decbe4388f4885bff4bb8d">solve</a>(<span class="keywordtype">float</span> a, <span class="keywordtype">float</span> b, <span class="keywordtype">float</span> c, <span class="keywordtype">float</span>* ans1_address, <span class="keywordtype">float</span>* ans2_address)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_function" href="solve_8cpp.html#a2cd22e341e05592bc54a987bc0a5ea4e">check_that_number_is_zero</a>(a))   </div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code hl_function" href="solve_8cpp.html#a2cd22e341e05592bc54a987bc0a5ea4e">check_that_number_is_zero</a>(b)) </div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">return</span> 0;</div>
+<div class="line"> </div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">        {</div>
+<div class="line">            *ans1_address = (float) (- c) / b; </div>
+<div class="line">            <span class="keywordflow">if</span> (<a class="code hl_function" href="solve_8cpp.html#a2cd22e341e05592bc54a987bc0a5ea4e">check_that_number_is_zero</a>(*ans1_address))   </div>
+<div class="line">                *ans1_address = 0;</div>
+<div class="line">            <span class="keywordflow">return</span> 1; </div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">    initialization and count the discriminant</div>
+<div class="line">    <span class="keywordtype">float</span> D = b*b - 4*a*c;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (D&lt;0)        </div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> 0;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(D&gt;0)     </div>
+<div class="line">    {</div>
+<div class="line"> </div>
+<div class="line">        *ans1_address = (float) (-b + sqrt(D)) / (2*a); </div>
+<div class="line">        *ans2_address = (float) (-b - sqrt(D)) / (2*a);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code hl_function" href="solve_8cpp.html#a2cd22e341e05592bc54a987bc0a5ea4e">check_that_number_is_zero</a>(*ans1_address))</div>
+<div class="line">                *ans1_address = 0;</div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code hl_function" href="solve_8cpp.html#a2cd22e341e05592bc54a987bc0a5ea4e">check_that_number_is_zero</a>(*ans2_address))</div>
+<div class="line">                *ans2_address = 0;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">return</span> 2;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_function" href="solve_8cpp.html#a2cd22e341e05592bc54a987bc0a5ea4e">check_that_number_is_zero</a>(D)) </div>
+<div class="line">    {</div>
+<div class="line">        *ans1_address = (-b) / (2*a);</div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code hl_function" href="solve_8cpp.html#a2cd22e341e05592bc54a987bc0a5ea4e">check_that_number_is_zero</a>(*ans1_address))</div>
+<div class="line">                *ans1_address = 0;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">return</span> 1;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">    {</div>
+<div class="line">        assert(0);   </div>
+<div class="line">        <span class="keywordflow">return</span> 0;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="asolve_8cpp_html_a2cd22e341e05592bc54a987bc0a5ea4e"><div class="ttname"><a href="solve_8cpp.html#a2cd22e341e05592bc54a987bc0a5ea4e">check_that_number_is_zero</a></div><div class="ttdeci">int check_that_number_is_zero(float num)</div><div class="ttdoc">function to check, what number is zero or not</div><div class="ttdef"><b>Definition</b> solve.cpp:28</div></div>
+<div class="ttc" id="asolve_8cpp_html_a9f59095734decbe4388f4885bff4bb8d"><div class="ttname"><a href="solve_8cpp.html#a9f59095734decbe4388f4885bff4bb8d">solve</a></div><div class="ttdeci">int solve(float a, float b, float c, float *ans1_address, float *ans2_address)</div><div class="ttdoc">function to solve a quadratic equation</div><div class="ttdef"><b>Definition</b> solve.cpp:122</div></div>
+</div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd><a class="el" href="input__of__quadratic__equation__coefficients_8cpp.html#ac825b149088fa1269dd52c4b42f08d37" title="the user enters values until he enters them correctly">input_of_quadratic_equation_coefficients()</a>, <a class="el" href="print__answer_8cpp.html#a472b06c22e059446057250a0fa5b9414" title="print correct answers or error">print_answer()</a> </dd></dl>
 
 </div>
 </div>

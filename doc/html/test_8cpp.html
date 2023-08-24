@@ -74,6 +74,31 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section note"><dt>Note</dt><dd>Operation logic: </dd>
+<dd>
+1 start tests </dd>
+<dd>
+2 if all tests passed successfully =&gt; good. else =&gt; bad</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="1_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe">main</a>(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">    printf(<span class="stringliteral">&quot;РќР°С‡РёРЅР°РµС‚СЃСЏ РїСЂРѕРІРµРґРµРЅРёРµ С‚РµСЃС‚РѕРІ \n&quot;</span>);</div>
+<div class="line">    <span class="keywordtype">int</span> number_of_passed_test = 0;</div>
+<div class="line">    number_of_passed_test += <a class="code hl_function" href="test_8cpp.html#ab64e6c0be58f2360c6905a2c502fa04f">Test_solve</a>(1, 1, 1, 0, 0, 0);</div>
+<div class="line">    number_of_passed_test += <a class="code hl_function" href="test_8cpp.html#ab64e6c0be58f2360c6905a2c502fa04f">Test_solve</a>(1, 2, 1, -1, 0, 1);</div>
+<div class="line">    number_of_passed_test += <a class="code hl_function" href="test_8cpp.html#ab64e6c0be58f2360c6905a2c502fa04f">Test_solve</a>(1, 0, -1, 1, -1, 2);</div>
+<div class="line">    number_of_passed_test += <a class="code hl_function" href="test_8cpp.html#ab64e6c0be58f2360c6905a2c502fa04f">Test_solve</a>(1, 1, 1, 0, 0, 0);</div>
+<div class="line">    number_of_passed_test += <a class="code hl_function" href="test_8cpp.html#ab64e6c0be58f2360c6905a2c502fa04f">Test_solve</a>(4, 4, 1, -0.5, 0, 1);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (number_of_passed_test == 5)</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Р’СЃРµ С‚РµСЃС‚С‹ РїСЂРѕР№РґРµРЅС‹ СѓСЃРїРµС€РЅРѕ \n&quot;</span>);</div>
+<div class="line">   <span class="keywordflow">else</span></div>
+<div class="line">        printf(<span class="stringliteral">&quot;РќРµ РІСЃРµ С‚РµСЃС‚С‹ Р±С‹Р»Рё РїСЂРѕР№РґРµРЅС‹ СѓСЃРїРµС€РЅРѕ \n&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="a1_8cpp_html_a840291bc02cba5474a4cb46a9b9566fe"><div class="ttname"><a href="1_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe">main</a></div><div class="ttdeci">int main(void)</div><div class="ttdoc">initializing variables and calling necessary functions</div><div class="ttdef"><b>Definition</b> 1.cpp:67</div></div>
+<div class="ttc" id="atest_8cpp_html_ab64e6c0be58f2360c6905a2c502fa04f"><div class="ttname"><a href="test_8cpp.html#ab64e6c0be58f2360c6905a2c502fa04f">Test_solve</a></div><div class="ttdeci">int Test_solve(float a, float b, float c, float ans1_ref, float ans2_ref, int nomber_of_roots_ref)</div><div class="ttdef"><b>Definition</b> test.cpp:95</div></div>
+</div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd><a class="el" href="input__of__quadratic__equation__coefficients_8cpp.html#ac825b149088fa1269dd52c4b42f08d37" title="the user enters values until he enters them correctly">input_of_quadratic_equation_coefficients()</a>, <a class="el" href="solve_8cpp.html#a9f59095734decbe4388f4885bff4bb8d" title="function to solve a quadratic equation">solve()</a>, <a class="el" href="print__answer_8cpp.html#a472b06c22e059446057250a0fa5b9414" title="print correct answers or error">print_answer()</a> </dd></dl>
 
 </div>
 </div>
@@ -102,6 +127,27 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">number1,number2</td><td>address of coefficients of the quadratic equation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0(if the program did not work correctly) or 1(the program did not work correctly) </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Operation logic: </dd>
+<dd>
+1 initialization of allowable error in comparison </dd>
+<dd>
+2 return 0(if users entered number1 - number2 smaller then allowable error or number2 - number1 smaller then allowable error) or return 1(if not)</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="test_8cpp.html#a740130db4c537f0d429e4e36bb17f6f4">not_equal_numbers</a>(<span class="keywordtype">float</span> num1, <span class="keywordtype">float</span> num2)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">float</span> allowable_comparison_error = (float) 0.0001;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> !(num1 - num2 &lt;= allowable_comparison_error || num2 - num1 &lt;= allowable_comparison_error);</div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="ttc" id="atest_8cpp_html_a740130db4c537f0d429e4e36bb17f6f4"><div class="ttname"><a href="test_8cpp.html#a740130db4c537f0d429e4e36bb17f6f4">not_equal_numbers</a></div><div class="ttdeci">int not_equal_numbers(float num1, float num2)</div><div class="ttdef"><b>Definition</b> test.cpp:140</div></div>
+</div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd><a class="el" href="solve_8cpp.html#a9f59095734decbe4388f4885bff4bb8d" title="function to solve a quadratic equation">solve()</a>, <a class="el" href="print__answer_8cpp.html#a472b06c22e059446057250a0fa5b9414" title="print correct answers or error">print_answer()</a> </dd></dl>
 
 </div>
 </div>
@@ -154,6 +200,44 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a,b,c</td><td>first answer, second answer (coefficients of the quadratic equation and corrrect roots) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0(if the program did not work correctly) or 1(the program did not work correctly) </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Operation logic: </dd>
+<dd>
+1 initialization: answers and number of roots </dd>
+<dd>
+2 get value of number of roots (function solve) </dd>
+<dd>
+3 finding mistake while testing and return 0(if program can find mistake) or return 1(if not)</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="test_8cpp.html#ab64e6c0be58f2360c6905a2c502fa04f">Test_solve</a>(<span class="keywordtype">float</span> a, <span class="keywordtype">float</span> b, <span class="keywordtype">float</span> c, <span class="keywordtype">float</span> ans1_ref, <span class="keywordtype">float</span> ans2_ref, <span class="keywordtype">int</span> nomber_of_roots_ref)</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">float</span> ans1 = 0;</div>
+<div class="line">    <span class="keywordtype">float</span> ans2 = 0;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">int</span> number_of_roots = <a class="code hl_function" href="solve_8cpp.html#a9f59095734decbe4388f4885bff4bb8d">solve</a>(a,b,c, &amp;ans1, &amp;ans2);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_function" href="test_8cpp.html#a740130db4c537f0d429e4e36bb17f6f4">not_equal_numbers</a>(ans1, ans1_ref) ||  <a class="code hl_function" href="test_8cpp.html#a740130db4c537f0d429e4e36bb17f6f4">not_equal_numbers</a>(ans2, ans2_ref) || number_of_roots != nomber_of_roots_ref) </div>
+<div class="line">    {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;РћС€РёР±РєР° РїСЂРё СЂРµС€РµРЅРёРё РєРІР°РґСЂР°С‚РЅРѕРіРѕ СѓСЂР°РІРЅРµРЅРёСЏ. РџРѕР»СѓС‡РµРЅРѕ: ans1=%f, ans2=%f, number_of_roots = %d. \nРћР¶РёРґР°Р»РѕСЃСЊ: ans1_ref=%f, ans2_ref=%f, nomber_of_roots_ref=%d \n&quot;</span>, ans1, ans2, nomber_of_roots, ans1_ref, ans2_ref, nomber_of_roots_ref);</div>
+<div class="line">        <span class="keywordflow">return</span> 0;</div>
+<div class="line"> </div>
+<div class="line">   }</div>
+<div class="line">   <span class="keywordflow">else</span></div>
+<div class="line">   {</div>
+<div class="line">       printf(<span class="stringliteral">&quot;РўРµСЃС‚ РїСЂРѕР№РґРµРЅ \n&quot;</span>);</div>
+<div class="line">      <span class="keywordflow">return</span> 1;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="ttc" id="asolve_8cpp_html_a9f59095734decbe4388f4885bff4bb8d"><div class="ttname"><a href="solve_8cpp.html#a9f59095734decbe4388f4885bff4bb8d">solve</a></div><div class="ttdeci">int solve(float a, float b, float c, float *ans1_address, float *ans2_address)</div><div class="ttdoc">function to solve a quadratic equation</div><div class="ttdef"><b>Definition</b> solve.cpp:122</div></div>
+</div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd><a class="el" href="solve_8cpp.html#a9f59095734decbe4388f4885bff4bb8d" title="function to solve a quadratic equation">solve()</a>, <a class="el" href="print__answer_8cpp.html#a472b06c22e059446057250a0fa5b9414" title="print correct answers or error">print_answer()</a> </dd></dl>
+<p>if the calculated roots do not correspond to known regular horses</p>
 
 </div>
 </div>
