@@ -3,7 +3,7 @@
 #include <TXLib.h>
 #include "solve.h"
 
-int Test_solve(float a, float b, float c, float ans1_ref, float ans2_ref, int nomber_of_roots_ref);
+int Test_solve(const Data_for_test* data);
 int not_equal_numbers(float num1, float num2);
 
 //{---------------------------------------------------------------------------------------------
@@ -40,11 +40,30 @@ int main(void)
 {
     printf("Начинается проведение тестов \n");
     int number_of_passed_test = 0;
-    number_of_passed_test += Test_solve(1, 1, 1, 0, 0, 0);
-    number_of_passed_test += Test_solve(1, 2, 1, -1, 0, 1);
-    number_of_passed_test += Test_solve(1, 0, -1, 1, -1, 2);
-    number_of_passed_test += Test_solve(1, 1, 1, 0, 0, 0);
-    number_of_passed_test += Test_solve(4, 4, 1, -0.5, 0, 1);
+    const int number_of_tests = 5;
+    struct Data_for_test
+    {
+        double a, b, c;
+        double x1, x2;
+        int number_of_roots;
+
+    };
+
+    struct Data_for_test All_data[number_of_tests] =   {{.a =1, .b=1, .c=1, .x1 = 0,    .x2=0,  .number_of_roots = 0},
+                                                        {.a =1, .b=2, .c=1, .x1 = -1,   .x2=0,  .number_of_roots = 1},
+                                                        {.a =1, .b=0, .c=1, .x1 = 1,    .x2=-1, .number_of_roots = 2},
+                                                        {.a =1, .b=1, .c=1, .x1 = 0,    .x2=0,  .number_of_roots = 0},
+                                                        {.a =4, .b=4, .c=1, .x1 = -0.5, .x2=0,  .number_of_roots = 1}};
+
+   /* number_of_passed_test += Test_solve(1,  1,  1,  0,   0, 0);
+    number_of_passed_test += Test_solve(1,  2,  1, -1,   0, 1);
+    number_of_passed_test += Test_solve(1,  0, -1,  1,  -1, 2);
+    number_of_passed_test += Test_solve(1,  1,  1,  0,   0, 0);
+    number_of_passed_test += Test_solve(4,  4,  1, -0.5, 0, 1); */
+    for (int i=0; i < number_of_tests; i++)
+    {
+        number_of_passed_test += Test_solve(&All_data[i]);
+    }
 
     if (number_of_passed_test == 5)
         printf("Все тесты пройдены успешно \n");
@@ -64,7 +83,7 @@ int main(void)
 //! @note Operation logic:
 //! @note 1 initialization: answers and number of roots
 //! @note 2 get value of number of roots (function solve)
-//! @note 3 finding mistake while testing and return 0(if program can find mistake) or return 1(if not)
+//! @note 3 finding mistake while testing and return 0(Data_for_test All_data[number_of_tests]if program can find mistake) or return 1(if not)
 //!
 //! @code
 //!int Test_solve(float a, float b, float c, float ans1_ref, float ans2_ref, int nomber_of_roots_ref)
@@ -92,17 +111,17 @@ int main(void)
 //! @see solve(), print_answer()
 //}-
 
-int Test_solve(float a, float b, float c, float ans1_ref, float ans2_ref, int number_of_roots_ref)
+//int Test_solve(float a, float b, float c, float ans1_ref, float ans2_ref, int number_of_roots_ref)
+int Test_solve(const struct Data_for_test* data)
 {
 
-    float ans1 = 0;
-    float ans2 = 0;
+    float ans1 = 0, ans2 = 0;
 
-    int number_of_roots = solve(a,b,c, &ans1, &ans2);
+    int number_of_roots = solve(data->a,data->b,data->c, &ans1, &ans2);
 
-    if (not_equal_numbers(ans1, ans1_ref) ||  not_equal_numbers(ans2, ans2_ref) || number_of_roots != number_of_roots_ref) /// if the calculated roots do not correspond to known regular horses
+    if (not_equal_numbers(ans1, data->x1) ||  not_equal_numbers(ans2, data->x2) || number_of_roots != data->number_of_roots) /// if the calculated roots do not correspond to known regular horses
     {
-        printf("Ошибка при решении квадратного уравнения. Получено: ans1=%f, ans2=%f, number_of_roots = %d. \n Ожидалось: ans1_ref=%f, ans2_ref=%f, number_of_roots_ref=%d \n", ans1, ans2, number_of_roots, ans1_ref, ans2_ref, number_of_roots_ref);
+        printf("Ошибка при решении квадратного уравнения. Получено: ans1=%f, ans2=%f, number_of_roots = %d. \n Ожидалось: ans1_ref=%f, ans2_ref=%f, number_of_roots_ref=%d \n", ans1, ans2, number_of_roots, data->x1, data->x1, data->number_of_roots);
         return 0;
 
     }
