@@ -46,6 +46,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;assert.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="print__answer_8h_source.html">print_answer.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -105,41 +106,7 @@ Functions</h2></td></tr>
 4 if numbers of roots = 2 then print correct answers </dd>
 <dd>
 5 if another situation: ERROR!</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="print__answer_8cpp.html#a472b06c22e059446057250a0fa5b9414">print_answer</a>(<span class="keywordtype">int</span> number_of_roots, <span class="keywordtype">float</span> ans1, <span class="keywordtype">float</span> ans2 )</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">switch</span>(number_of_roots)</div>
-<div class="line">    {</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">case</span> 0:  </div>
-<div class="line">    {</div>
-<div class="line">        printf(<span class="stringliteral">&quot;РћС‚СЃСѓС‚СЃС‚РІСѓСЋС‚ РІРµС‰РµСЃС‚РІРµРЅРЅС‹Рµ РєРѕСЂРЅРё&quot;</span>);</div>
-<div class="line">        <span class="keywordflow">break</span>;</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">case</span> 1:</div>
-<div class="line">    {</div>
-<div class="line">        printf(<span class="stringliteral">&quot;Р•РґРёРЅСЃС‚РІРµРЅРЅС‹Р№ РєРѕСЂРµРЅСЊ %f&quot;</span>, ans1);</div>
-<div class="line">        <span class="keywordflow">break</span>;</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">case</span> 2:</div>
-<div class="line">    {</div>
-<div class="line">        printf(<span class="stringliteral">&quot;РџРµСЂРІС‹Р№ РєРѕСЂРµРЅСЊ %f \n&quot;</span>, ans1);</div>
-<div class="line">        printf(<span class="stringliteral">&quot;Р’С‚РѕСЂРѕР№ РєРѕСЂРµРЅСЊ %f&quot;</span>, ans2);</div>
-<div class="line">        <span class="keywordflow">break</span>;</div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordflow">default</span>:</div>
-<div class="line">    {</div>
-<div class="line">        printf(<span class="stringliteral">&quot;РћС€РёР±РєР°!&quot;</span>);</div>
-<div class="line">        assert(0);</div>
-<div class="line">        <span class="keywordflow">break</span>;</div>
-<div class="line">    }</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
-<div class="line">}</div>
-<div class="ttc" id="aprint__answer_8cpp_html_a472b06c22e059446057250a0fa5b9414"><div class="ttname"><a href="print__answer_8cpp.html#a472b06c22e059446057250a0fa5b9414">print_answer</a></div><div class="ttdeci">int print_answer(int nomber_of_roots, float ans1, float ans2)</div><div class="ttdoc">print correct answers or error</div><div class="ttdef"><b>Definition</b> print_answer.cpp:64</div></div>
-</div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd><a class="el" href="input__of__quadratic__equation__coefficients_8cpp.html#ac825b149088fa1269dd52c4b42f08d37" title="the user enters values until he enters them correctly">input_of_quadratic_equation_coefficients()</a>, <a class="el" href="solve_8cpp.html#a9f59095734decbe4388f4885bff4bb8d" title="function to solve a quadratic equation">solve()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="input__of__quadratic__equation__coefficients_8cpp.html#ac825b149088fa1269dd52c4b42f08d37" title="the user enters values until he enters them correctly">input_of_quadratic_equation_coefficients()</a>, <a class="el" href="solve_8cpp.html#a9f59095734decbe4388f4885bff4bb8d" title="function to determine the type of equation">solve()</a>, <a class="el" href="1_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="initializing variables and calling necessary functions">main()</a> </dd></dl>
 
 </div>
 </div>

@@ -7,4 +7,4 @@ solve.o: solve.cpp
 	g++ -c solve.cpp
 
 clean:
-	rm -rf *.o test
+	rm -rf *.o hello

@@ -3,8 +3,6 @@
 #include <TXLib.h>
 #include "solve.h"
 
-int not_equal_numbers(float num1, float num2);
-
 struct Data_for_test
     {
         float a, b, c;
@@ -25,11 +23,12 @@ int Test_solve(const struct Data_for_test* data);
 //!{
 //!    printf("Начинается проведение тестов \n");
 //!    int number_of_passed_test = 0;
-//!    number_of_passed_test += Test_solve(1, 1, 1, 0, 0, 0);
-//!    number_of_passed_test += Test_solve(1, 2, 1, -1, 0, 1);
-//!    number_of_passed_test += Test_solve(1, 0, -1, 1, -1, 2);
-//!    number_of_passed_test += Test_solve(1, 1, 1, 0, 0, 0);
-//!    number_of_passed_test += Test_solve(4, 4, 1, -0.5, 0, 1);
+//!    const int number_of_tests = 5;
+//!    struct Data_for_test All_data[number_of_tests] =  {{.a =1, .b=1, .c=1, .x1 = 0,    .x2=0,  .number_of_roots = 0},
+//!                                                       {.a =1, .b=2, .c=1, .x1 = -1,   .x2=0,  .number_of_roots = 1},
+//!                                                       {.a =1, .b=0, .c=-1, .x1 = 1,    .x2=-1, .number_of_roots = 2},
+//!                                                       {.a =1, .b=1, .c=1, .x1 = 0,    .x2=0,  .number_of_roots = 0},
+//!                                                       {.a =4, .b=4, .c=1, .x1 = -0.5, .x2=0,  .number_of_roots = 1}};
 //!
 //!    if (number_of_passed_test == 5)
 //!        printf("Все тесты пройдены успешно \n");
@@ -50,12 +49,7 @@ int main(void)
     int number_of_passed_test = 0;
     const int number_of_tests = 5;
 
-    /*number_of_passed_test += Test_solve(1, 1, 1, 0, 0, 0);
-    number_of_passed_test += Test_solve(1, 2, 1, -1, 0, 1);
-    number_of_passed_test += Test_solve(1, 0, -1, 1, -1, 2);
-    number_of_passed_test += Test_solve(1, 1, 1, 0, 0, 0);
-    number_of_passed_test += Test_solve(4, 4, 1, -0.5, 0, 1);
-     */
+// TODO: Separate text file for tests
     struct Data_for_test All_data[number_of_tests] =   {{.a =1, .b=1, .c=1, .x1 = 0,    .x2=0,  .number_of_roots = 0},
                                                         {.a =1, .b=2, .c=1, .x1 = -1,   .x2=0,  .number_of_roots = 1},
                                                         {.a =1, .b=0, .c=-1, .x1 = 1,    .x2=-1, .number_of_roots = 2},
@@ -68,7 +62,7 @@ int main(void)
         number_of_passed_test += Test_solve(&All_data[i]);
     }
 
-    if (number_of_passed_test == 5)
+    if (number_of_passed_test == 5) // TODO: Add colors :)
         printf("Все тесты пройдены успешно \n");
    else
         printf("Не все тесты были пройдены успешно \n");
@@ -77,7 +71,7 @@ int main(void)
 }
 
 /*!
-\param a, b,c first answer, second answer (coefficients of the quadratic equation and corrrect roots)
+\param a, b,c, first_answer, second_answer (coefficients of the quadratic equation and corrrect roots)
 \return 0(if the program did not work correctly) or 1(the program did not work correctly)
 */
 
@@ -99,7 +93,7 @@ int main(void)
 //!
 //!    if (not_equal_numbers(ans1, data->x1) ||  not_equal_numbers(ans2, data->x2) || number_of_roots != data->number_of_roots) /// if the calculated roots do not correspond to known regular horses
 //!    {
-//!        printf("Ошибка при решении квадратного уравнения. Получено: ans1=%f, ans2=%f, number_of_roots = %d. \nОжидалось: ans1_ref=%f, ans2_ref=%f, nomber_of_roots_ref=%d \n", ans1, ans2, nomber_of_roots, ans1_ref, ans2_ref, nomber_of_roots_ref);
+//!        printf("Ошибка при решении квадратного уравнения. Получено: ans1=%f, ans2=%f, number_of_roots = %d. \nОжидалось: ans1_ref=%f, ans2_ref=%f, nomber_of_roots_ref=%d \n", ans1, ans2, number_of_roots, data->x1, data->x1, data->number_of_roots);
 //!        return 0;
 //!
 //!   }
@@ -114,7 +108,7 @@ int main(void)
 //! @see solve(), print_answer()
 //}-
 
-int Test_solve(const struct Data_for_test* data)
+int Test_solve(const struct Data_for_test* data) // TODO: naming style
 {
 
     float ans1 = 0;
@@ -159,11 +153,3 @@ int Test_solve(const struct Data_for_test* data)
 //! @endcode
 //! @see solve(), print_answer()
 //}-
-
-int not_equal_numbers(float num1, float num2)
-{
-    const float allowable_comparison_error = (float) 0.0001;
-
-    return !(num1 - num2 <= allowable_comparison_error || num2 - num1 <= allowable_comparison_error);
-
-}

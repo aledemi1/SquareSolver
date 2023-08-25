@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <TXLib.h>
 #include <math.h>
-void input_of_quadratic_equation_coefficients(float* a_address, float* b_address, float* c_address);
+#include "input_of_quadratic_equation_coefficients.h"
 
 //! the user enters values until he enters them correctly
 
@@ -19,27 +19,13 @@ void input_of_quadratic_equation_coefficients(float* a_address, float* b_address
 //! @note 4 line cleaning
 //! @note 5 end cycle
 //!
-//! @code
-//!void input_of_quadratic_equation_coefficients(float* a_address, float* b_address, float* c_address)
-//!{
-//!    while(isfinite(*a_address) == 0 || isfinite(*b_address) == 0 || isfinite(*c_address) == 0)  /*проверка на верный ввод(проверяем, что вводят числа)*/
-//!    {
-//!        printf("Введите коэффиценты a b c \n");
-//!        scanf("%f%f%f", a_address, b_address, c_address);
-//!       while (getchar() != '\n');
-//!
-//!    }
-//!
-//!
-//!}
-//! @endcode
-//! @see solve(), print_answer()
+//! @see solve(), print_answer(), main()
 //}-
 
 
 void input_of_quadratic_equation_coefficients(float* a_address, float* b_address, float* c_address)
 {
-    while(isfinite(*a_address) == 0 || isfinite(*b_address) == 0 || isfinite(*c_address) == 0)  /*проверка на верный ввод(проверяем, что вводят числа)*/
+    while(!isfinite(*a_address) || !isfinite(*b_address) || !isfinite(*c_address))  /*проверка на верный ввод(проверяем, что вводят числа)*/
     {
         printf("Введите коэффиценты a b c \n");
         scanf("%f%f%f", a_address, b_address, c_address);

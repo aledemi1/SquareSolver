@@ -1,0 +1,72 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe,
+
+ВНЕЗАПНО: Деление на ноль при операции с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_DIVIDE_BY_ZERO (0xC000008E) при выполнении кода по адресу 0x0041D893 в функции solve() в модуле C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x0055369C (32-bit), Flags: Cmdre0, Thread: 0x149C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041D893 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: solve()
+# 1 0x0041C636 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 16:27:49, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 17:51:44
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Деление на ноль при операции с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_DIVIDE_BY_ZERO (0xC000008E) при выполнении кода по адресу 0x0041D893 в функции solve() в модуле C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x0055369C (32-bit), Flags: Cmdre0, Thread: 0x149C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041D893 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: solve()
+# 1 0x0041C636 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 16:27:49, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 17:51:44
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
