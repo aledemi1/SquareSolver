@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <TXLib.h>
 #include <math.h>
+#include <errno.h>
 #include "input_of_quadratic_equation_coefficients.h"
 #include "solve.h"
 #include "print_answer.h"
@@ -50,10 +52,27 @@ int main(int argc, char* argv[])
     if(argc == 4 )
     {
         printf("Введённые вами коэффиценты через командную строку %s %s %s \n", argv[1], argv[2], argv[3]);
-        a =(float) atof(argv[1]);
-        b =(float) atof(argv[2]);
-        c =(float) atof(argv[3]);
+        char arg_error[20] = " ";
+        char* arg_error_address = arg_error;
+        a = (float) strtod(argv[1], &arg_error_address);
+        b = (float) strtod(argv[2], &arg_error_address);
+        c = (float) strtod(argv[3], &arg_error_address);
 
+        //assert(arg_error == " ");
+        printf("%s \n",arg_error);
+
+       /* a = (float) atof(argv[1]);
+        b = (float) atof(argv[2]);
+        c = (float) atof(argv[3]);
+        assert(a != NAN || b != NAN || c != NAN );       */
+
+        printf("Прочитано как: a = %f, b = %f, c = %f \n", a, b, c);
+
+        if (( errno == ERANGE ) ||
+         (a == HUGE_VAL  ) || ( a == -HUGE_VAL ) ||
+         ( b == HUGE_VAL ) || ( b == -HUGE_VAL ) ||
+         ( c == HUGE_VAL ) || ( c == -HUGE_VAL ))
+            input_of_quadratic_equation_coefficients( &a, &b,  &c);
     }
     else
         input_of_quadratic_equation_coefficients( &a, &b,  &c);  //ввод
