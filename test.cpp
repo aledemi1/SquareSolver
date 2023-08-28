@@ -26,22 +26,51 @@ int main(void)
 {
     printf("Начинается проведение тестов \n");
     int number_of_passed_test = 0;
-    const int number_of_tests = 5;
+    const int max_number_of_tests = 100;
 
-// TODO: Separate text file for tests
+    FILE *file;
+    file = fopen("data_for_tests.txt", "r");
+
+    int a = 0;
+
+    struct data_for_test all_data[max_number_of_tests] = {};
+    if((file = fopen("data_for_tests.txt", "r")) == NULL)
+    {
+        printf("В файле data_for_tests.txt отсутвуют данные для тестов");
+        return 0;
+
+    }
+    ///нужно добавить считывание количества строк в файле
+
+
+
+    while (fscanf(file, "%f%f%f%f%f%d", &(all_data[a].a),
+    &(all_data[a].b), &(all_data[a].c), &(all_data[a].x1),
+     &(all_data[a].x2),
+    &(all_data[a].number_of_roots))
+    != EOF)
+    {
+
+        ///printf("%f %f %f %f %f %d \n", all_data[a].a, all_data[a].b, all_data[a].c, all_data[a].x1, all_data[a].x2, all_data[a].number_of_roots);
+        a++;
+    }
+
+    fclose (file);
+
+/*
     struct data_for_test all_data[number_of_tests] =   {{.a =1, .b=1, .c=1, .x1 = 0,    .x2=0,  .number_of_roots = 0},
                                                         {.a =1, .b=2, .c=1, .x1 = -1,   .x2=0,  .number_of_roots = 1},
                                                         {.a =1, .b=0, .c=-1, .x1 = 1,    .x2=-1, .number_of_roots = 2},
                                                         {.a =1, .b=1, .c=1, .x1 = 0,    .x2=0,  .number_of_roots = 0},
                                                         {.a =4, .b=4, .c=1, .x1 = -0.5, .x2=0,  .number_of_roots = 1}};
 
-
-    for (int i=0; i < number_of_tests; i++)
+  */
+    for (int i=0; i < a ; i++)
     {
         number_of_passed_test += Test_solve(&all_data[i]);
     }
 
-    if (number_of_passed_test == number_of_tests)
+    if (number_of_passed_test == a)
         printf("\033[01;32mВсе тесты пройдены успешно \033[0;37m\n");
    else
         printf("\033[01;31mНе все тесты были пройдены успешно \033[0;37m\n");
