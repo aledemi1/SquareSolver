@@ -25,10 +25,12 @@
 
 void input_of_quadratic_equation_coefficients(float* a_address, float* b_address, float* c_address)
 {
-    while(!isfinite(*a_address) || !isfinite(*b_address) || !isfinite(*c_address))  /*проверка на верный ввод(проверяем, что вводят числа)*/
+    while(!isfinite(*a_address) || !isfinite(*b_address) || !isfinite(*c_address))  //проверка на верный ввод(проверяем, что вводят числа)
     {
         printf("Введите коэффиценты a b c \n");
+
         scanf("%f%f%f", a_address, b_address, c_address);
+
         while (getchar() != '\n');
 
     }

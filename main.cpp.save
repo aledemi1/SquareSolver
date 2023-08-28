@@ -43,20 +43,18 @@ int main(int argc, char* argv[])
 {
     print_welcome_message();
 
+    if(argc > 1)
+    {
+        for (int i = 0; i < argc; i
+
+    }
+
     float a = NAN;
     float b = NAN;
     float c = NAN;
 
-    if(argc > 1)
-    {
-        printf("Введённые вами коэффиценты через командную строку %s %s %s \n", argv[1], argv[2], argv[3]);
-        a =(float) atoi(argv[1]);
-        b =(float) atoi(argv[2]);
-        c =(float) atoi(argv[3]);
 
-    }
-    else
-        input_of_quadratic_equation_coefficients( &a, &b,  &c);  //ввод
+    input_of_quadratic_equation_coefficients( &a, &b,  &c);  //ввод
 
     float ans1 = NAN;
     float ans2 = NAN;

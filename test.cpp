@@ -29,11 +29,11 @@ int main(void)
     const int max_number_of_tests = 100;
 
     FILE *file;
-    file = fopen("data_for_tests.txt", "r");
 
-    int a = 0;
+    int number_of_tests = 0;
 
     struct data_for_test all_data[max_number_of_tests] = {};
+
     if((file = fopen("data_for_tests.txt", "r")) == NULL)
     {
         printf("В файле data_for_tests.txt отсутвуют данные для тестов");
@@ -44,15 +44,15 @@ int main(void)
 
 
 
-    while (fscanf(file, "%f%f%f%f%f%d", &(all_data[a].a),
-    &(all_data[a].b), &(all_data[a].c), &(all_data[a].x1),
-     &(all_data[a].x2),
-    &(all_data[a].number_of_roots))
+    while (fscanf(file, "%f%f%f%f%f%d",
+     &(all_data[number_of_tests].a), &(all_data[number_of_tests].b), &(all_data[number_of_tests].c),  //coefficients of the quadratic equation
+     &(all_data[a].x1), &(all_data[a].x2), //roots
+    &(all_data[a].number_of_roots))       //number of roots
     != EOF)
     {
 
         ///printf("%f %f %f %f %f %d \n", all_data[a].a, all_data[a].b, all_data[a].c, all_data[a].x1, all_data[a].x2, all_data[a].number_of_roots);
-        a++;
+        number_of_tests++;
     }
 
     fclose (file);
@@ -65,14 +65,14 @@ int main(void)
                                                         {.a =4, .b=4, .c=1, .x1 = -0.5, .x2=0,  .number_of_roots = 1}};
 
   */
-    for (int i=0; i < a ; i++)
+    for (int i = 0; i < number_of_tests ; i++)
     {
         number_of_passed_test += Test_solve(&all_data[i]);
     }
 
-    if (number_of_passed_test == a)
+    if (number_of_passed_test == number_of_tests)
         printf("\033[01;32mВсе тесты пройдены успешно \033[0;37m\n");
-   else
+    else
         printf("\033[01;31mНе все тесты были пройдены успешно \033[0;37m\n");
 
     return 0;
@@ -99,7 +99,7 @@ int Test_solve(const struct data_for_test* data)
     float ans1 = 0;
     float ans2 = 0;
 
-    int number_of_roots = solve(data->a,data->b,data->c, &ans1, &ans2);
+    int number_of_roots = solve(data->a, data->b, data->c, &ans1, &ans2);
 
      if (not_equal_numbers(ans1, data->x1) ||  not_equal_numbers(ans2, data->x2) || number_of_roots != data->number_of_roots) /// if the calculated roots do not correspond to known regular horses
     {
