@@ -47,12 +47,12 @@ int main(int argc, char* argv[])
     float b = NAN;
     float c = NAN;
 
-    if(argc > 1)
+    if(argc == 4 )
     {
         printf("Введённые вами коэффиценты через командную строку %s %s %s \n", argv[1], argv[2], argv[3]);
-        a =(float) atoi(argv[1]);
-        b =(float) atoi(argv[2]);
-        c =(float) atoi(argv[3]);
+        a =(float) atof(argv[1]);
+        b =(float) atof(argv[2]);
+        c =(float) atof(argv[3]);
 
     }
     else
@@ -61,9 +61,8 @@ int main(int argc, char* argv[])
     float ans1 = NAN;
     float ans2 = NAN;
 
-    int nomber_of_roots = NAN;
+    int nomber_of_roots = solve(a, b, c, &ans1, &ans2);
 
-    nomber_of_roots = solve(a, b, c, &ans1, &ans2);
 
     print_answer(nomber_of_roots, ans1, ans2);
 
