@@ -53,9 +53,9 @@ int main(int argc, char* argv[])
     {
         printf("Введённые вами коэффиценты через командную строку %s %s %s \n", argv[1], argv[2], argv[3]);
         char arg_error[20] = " ";
-        //char arg_not_error[20] = " ";
         char* arg_error_address = arg_error;
         int flag = 0;
+
         a = (float) strtod(argv[1], &arg_error_address);
         if (arg_error_address == argv[1]) flag = 1;
 
@@ -65,8 +65,6 @@ int main(int argc, char* argv[])
         c = (float) strtod(argv[3], &arg_error_address);
         if (arg_error_address == argv[3]) flag = 1;
 
-        printf("%s \n",arg_error);
-
         printf("Прочитано как: a = %f, b = %f, c = %f \n", a, b, c);
 
         if (( errno == ERANGE ) || flag ||
@@ -74,7 +72,7 @@ int main(int argc, char* argv[])
          ( b == HUGE_VAL ) || ( b == -HUGE_VAL ) ||
          ( c == HUGE_VAL ) || ( c == -HUGE_VAL ))
         {
-            printf("Вы не смогли правильно ввести коэффиценты через командную строку \n");
+            printf("Вы не смогли правильно ввести коэффиценты через командную строку \n \n \n");
             a = NAN;
             b = NAN;
             c = NAN;
