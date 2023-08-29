@@ -30,6 +30,12 @@ void input_of_quadratic_equation_coefficients(float* a_address, float* b_address
         printf("Введите коэффиценты a b c \n");
 
         scanf("%f%f%f", a_address, b_address, c_address);
+        (float) *a_address;
+        (float) *b_address;
+        (float) *c_address;
+        printf("a = %f\n", *a_address);
+        printf("b = %f\n", *b_address);
+        printf("c = %f\n", *c_address);
 
         while (getchar() != '\n');
 

@@ -56,6 +56,8 @@ int main(int argc, char* argv[])
         char* arg_error_address = arg_error;
         int flag = 0;
 
+        // echo "1 2 12fdsfsd" | result_main
+        // 1000000000000 1 0
         a = (float) strtod(argv[1], &arg_error_address);
         if (arg_error_address == argv[1]) flag = 1;
 
@@ -80,8 +82,11 @@ int main(int argc, char* argv[])
 
         }
     }
+
     else
         input_of_quadratic_equation_coefficients( &a, &b,  &c);  //ввод
+
+
 
     float ans1 = NAN;
     float ans2 = NAN;
