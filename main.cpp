@@ -3,20 +3,21 @@
 #include <TXLib.h>
 #include <math.h>
 #include <errno.h>
+
 #include "input_of_quadratic_equation_coefficients.h"
 #include "solve.h"
 #include "print_answer.h"
 
+void get_com_line_arg(char* argv[], double* a_address, double* b_address, double* c_address);
+int check_com_arg(int k, char* arg_error_address, char* argv[]);
+
+void print_welcome();
 
 
-
-
-void print_welcome_message();
-//! initializing variables and calling necessary functions
 
 
 //{---------------------------------------------------------------------------------------------
-//!
+//! @brief initializing variables and calling necessary functions
 //!
 //! @param a first coefficient of the quadratic equation
 //! @param b second coefficient of the quadratic equation
@@ -31,67 +32,38 @@ void print_welcome_message();
 //!
 //!
 //!
-//! @note Operation logic:
-//! @note 1 initialization: coefficients of the quadratic equation
-//! @note 2 function (input_of_quadratic_equation_coefficients) get entering variables from the keyboard
-//! @note 3 initialization: roots of the quadratic equation and number of roots
-//! @note 4 function(solve) for counting the number of real roots
-//! @note 5 function(print_answer) print correct roots
+//! @note Program do following
+//! @note 1) initialization: coefficients of the quadratic equation
+//! @note 2) function (input_of_quadratic_equation_coefficients) get entering variables from the keyboard
+//! @note 3) initialization: roots of the quadratic equation and number of roots
+//! @note 4) function(solve) for counting the number of real roots
+//! @note 5) function(print_answer) print correct roots
 //}-
 
 
 
 int main(int argc, char* argv[])
 {
-    print_welcome_message();
+    print_welcome();
 
-    float a = NAN;
-    float b = NAN;
-    float c = NAN;
+    double a = NAN;
+    double b = NAN;
+    double c = NAN;
 
-    if(argc == 4 )
-    {
-        printf("Введённые вами коэффиценты через командную строку %s %s %s \n", argv[1], argv[2], argv[3]);
-        char arg_error[20] = " ";
-        char* arg_error_address = arg_error;
-        int flag = 0;
-
-        // echo "1 2 12fdsfsd" | result_main
-        // 1000000000000 1 0
-        a = (float) strtod(argv[1], &arg_error_address);
-        if (arg_error_address == argv[1]) flag = 1;
-
-        b = (float) strtod(argv[2], &arg_error_address);
-        if (arg_error_address == argv[2]) flag = 1;
-
-        c = (float) strtod(argv[3], &arg_error_address);
-        if (arg_error_address == argv[3]) flag = 1;
-
-        printf("Прочитано как: a = %f, b = %f, c = %f \n", a, b, c);
-
-        if (( errno == ERANGE ) || flag ||
-         ( a == HUGE_VAL ) || ( a == -HUGE_VAL ) ||
-         ( b == HUGE_VAL ) || ( b == -HUGE_VAL ) ||
-         ( c == HUGE_VAL ) || ( c == -HUGE_VAL ))
-        {
-            printf("Вы не смогли правильно ввести коэффиценты через командную строку \n \n \n");
-            a = NAN;
-            b = NAN;
-            c = NAN;
-            input_of_quadratic_equation_coefficients( &a, &b,  &c);
-
-        }
-    }
+    if(argc == 4)
+        get_com_line_arg(argv, &a, &b, &c);
 
     else
-        input_of_quadratic_equation_coefficients( &a, &b,  &c);  //ввод
+    {
+        if(argc != 1)
+            printf("Выввели неправильное количество аргументов командной строки \n");
+        input_of_quadratic_equation_coefficients( &a, &b, &c);
+    }
 
+    double ans1 = NAN;
+    double ans2 = NAN;
 
-
-    float ans1 = NAN;
-    float ans2 = NAN;
-
-    int nomber_of_roots = solve(a, b, c, &ans1, &ans2);
+    int nomber_of_roots = solve_quadratic_equation(a, b, c, &ans1, &ans2);
 
 
     print_answer(nomber_of_roots, ans1, ans2);
@@ -99,20 +71,77 @@ int main(int argc, char* argv[])
     return 0;
 }
 
-//! print welcome message and kind of quadratic equation
+
 //{---------------------------------------------------------------------------------------------
-//!
+//! @brief print welcome message and kind of quadratic equation
 //!
 //! @see input_of_quadratic_equation_coefficients(), solve(), print_answer()
 //}-
-void print_welcome_message()
+void print_welcome()
 {
-    printf("Вас приветсвует программа для поиска решений квадратных уравнений \n");
-
-    printf("Квадратное уравнение имеет вид: \n");
-
-    printf("ax^2 + bx + c = 0 \n");
+    printf("Вас приветсвует программа для поиска решений квадратных уравнений \n"
+           "Квадратное уравнение имеет вид: \n"
+           "ax^2 + bx + c = 0 \n");
 }
 
+//{---------------------------------------------------------------------------------------------
+//! @brief gets arguments from command line
+//!
+//! @see input_of_quadratic_equation_coefficients(), solve(), print_answer()
+//}-
+void get_com_line_arg(char* argv[], double* a_address, double* b_address, double* c_address)
+{
+    printf("Введённые вами коэффиценты через командную строку %s %s %s \n", argv[1], argv[2], argv[3]);
 
+    char arg_error[20] = " ";
+    char* arg_error_address = arg_error;
+    int flag = 0;
+
+    // echo "1 2 12fdsfsd" | result_main
+
+    double a = NAN;
+    double b = NAN;
+    double c = NAN;
+
+    a = (double) strtod(argv[1], &arg_error_address);
+
+    if (check_com_arg(1, arg_error_address, argv))
+        flag = 1;
+
+    b = (double) strtod(argv[2], &arg_error_address);
+    if (check_com_arg(2, arg_error_address, argv))
+        flag = 1;
+
+    c = (double) strtod(argv[3], &arg_error_address);
+    if (check_com_arg(3, arg_error_address, argv))
+        flag = 1;
+
+    //printf("Прочитано как: a = %lf, b = %lf, c = %lf \n", a, b, c);
+
+    // if ( errno == ERANGE )
+    if (errno == ERANGE || flag)
+    /*( a == HUGE_VAL ) || ( a == -HUGE_VAL ) ||
+      ( b == HUGE_VAL ) || ( b == -HUGE_VAL ) ||
+      ( c == HUGE_VAL ) || ( c == -HUGE_VAL ))*/
+    {
+        printf("Вы не смогли правильно ввести коэффиценты через командную строку \n \n \n");
+        a = NAN;
+        b = NAN;
+        c = NAN;
+        input_of_quadratic_equation_coefficients( &a, &b,  &c);
+
+    }
+
+    *a_address = a;
+    *b_address = b;
+    *c_address = c;
+
+}
+
+int check_com_arg(int k, char* arg_error_address, char* argv[])
+{
+    return(arg_error_address == &( (argv[k])[strlen(argv[k])-1] ) || arg_error_address == argv[k]);
+
+
+}
 

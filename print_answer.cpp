@@ -8,9 +8,14 @@
 \return print answer
 */
 
+#define SS_ZERO_ROOTS 0
+#define SS_ONE_ROOT 1
+#define SS_TWO_ROOTS 2
+#define SS_INFINITY_ROOTS -1
+
 //{---------------------------------------------------------------------------------------------
 //!
-//! @note Operation logic:
+//! @note Program do following
 //! @note 1 function get number of roots
 //! @note 2 if numbers of roots = 0 then print it
 //! @note 3 if numbers of roots = 1 then print correct answer
@@ -21,38 +26,38 @@
 //}-
 
 
-
-
-
-
-int print_answer(int number_of_roots, float ans1, float ans2 )
+int print_answer(int number_of_roots, double ans1, double ans2 )
 {
     switch(number_of_roots)
     {
 
-    case 0:
-    {
+    case SS_ZERO_ROOTS:
+
         printf("Отсутствуют вещественные корни");
         break;
-    }
 
-    case 1:
-    {
-        printf("Единственный корень %.4f", ans1);
-        break;
-    }
+    case SS_ONE_ROOT:
 
-    case 2:
-    {
-        printf("Первый корень %.4f \n", ans1);
-        printf("Второй корень %.4f", ans2);
+        printf("Единственный корень %g", ans1);
         break;
-    }
+
+    case SS_TWO_ROOTS:
+
+        printf("Первый корень %g \n", ans1);
+        printf("Второй корень %g", ans2);
+        break;
+
+    case SS_INFINITY_ROOTS:
+
+        printf("Имеется бесконечное количество корней \n");
+        break;
+
+
     default:
-    {
-        assert(0);
+
+        assert(0 && "Получено неверное количество корней \n");
         break;
-    }
+
     }
 
     return 0;

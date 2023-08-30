@@ -1,45 +1,73 @@
 #include <stdio.h>
 #include <TXLib.h>
 #include <math.h>
+
 #include "input_of_quadratic_equation_coefficients.h"
 
-//! the user enters values until he enters them correctly
 
-    /*!
-\param a_address, b_address, c_address (address of coefficients of the quadratic equation)
-\return a, b, c coefficients of the quadratic equation
-*/
 
 //{---------------------------------------------------------------------------------------------
 //!
-//! @note Operation logic:
-//! @note 1 start cycle(while coefficients of the quadratic equation have not correct values)
-//! @note 2 user enter coefficients
-//! @note 3 program read their and sets the value of the variables if the user enters them correctly
-//! @note 4 line cleaning
-//! @note 5 end cycle
+//! @brief the user enters values until he enters them correctly
+//!
+//! @note Program do following
+//! @note 1) check nullptr problem
+//! @note 2) initialization
+//! @note 3) program read coefficients and sets the value of the variables if the user enters them correctly
+//! @note 4) line cleaning
+//!
+//!
+//! @param a_address, b_address, c_address (address of coefficients of the quadratic equation)
+//!
+//! @return a, b, c coefficients of the quadratic equation
 //!
 //! @see solve(), print_answer(), main()
 //}-
 
 
-void input_of_quadratic_equation_coefficients(float* a_address, float* b_address, float* c_address)
+void input_of_quadratic_equation_coefficients(double* a_address, double* b_address, double* c_address)
 {
-    while(!isfinite(*a_address) || !isfinite(*b_address) || !isfinite(*c_address))  //проверка на верный ввод(проверяем, что вводят числа)
+    assert( a_address != nullptr &&
+            b_address != nullptr &&
+            c_address != nullptr );
+
+
+    double a = NAN;
+    double b = NAN;
+    double c = NAN;
+
+    while(!isfinite(a) ||
+          !isfinite(b) ||
+          !isfinite(c))  //проверка на верный ввод(проверяем, что вводят числа)
     {
+
+
         printf("Введите коэффиценты a b c \n");
 
-        scanf("%f%f%f", a_address, b_address, c_address);
-        (float) *a_address;
-        (float) *b_address;
-        (float) *c_address;
-        printf("a = %f\n", *a_address);
-        printf("b = %f\n", *b_address);
-        printf("c = %f\n", *c_address);
+        fscanf(stdin, "%lf %lf %lf", &a, &b, &c);
 
-        while (getchar() != '\n');
+        int check_char =  getchar();
+        if (!(check_char == '\n' || check_char == EOF ))
+        {
 
+            while (!(check_char == '\n' || check_char == EOF ))
+            {
+                check_char =  getchar();
+            }
+            a = NAN;
+            b = NAN;
+            c = NAN;
+
+        }
+
+
+
+        assert(check_char != EOF && "Программа так не работает!!! Она не считывает данные через echo!!!!");
     }
+
+    *a_address = a;
+    *b_address = b;
+    *c_address = c;
 
 }
 

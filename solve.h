@@ -1,7 +1,7 @@
 #pragma once
 
-int not_equal_numbers(float num1, float num2);
-int solve_linear_equation(float a, float b, float* ans1_address);
-int solve_quadratic_equation(float a, float b, float c,  float* ans1_address, float* ans2_address);
-int solve(float a, float b , float c, float* ans1_address, float* ans2_address);
+int equal_numbers(double num1, double num2);
+int equal_zero(double num1);
+int solve_linear_equation(double a, double b, double* ans1_address);
+int solve_quadratic_equation(double a, double b, double c,  double* ans1_address, double* ans2_address);
 

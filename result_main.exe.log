@@ -366,3 +366,501 @@ Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe
 Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe, файл: input_of_quadratic_equation_coefficients.cpp, строка: 31, функция: void input_of_quadratic_equation_coefficients(double*, double*, double*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "a_address == nullptr || b_address == nullptr || c_address == nullptr".
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x0055369C (32-bit), Flags: Cmdre0, Thread: 0x5AE8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00438F19 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: input_of_quadratic_equation_coefficients()
+# 1 0x0041C62F in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 13:08:55, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 30 2023 13:10:48
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe, файл: input_of_quadratic_equation_coefficients.cpp, строка: 31, функция: void input_of_quadratic_equation_coefficients(double*, double*, double*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "a_address == nullptr || b_address == nullptr || c_address == nullptr".
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x0055369C (32-bit), Flags: Cmdre0, Thread: 0x39EC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00438F19 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: input_of_quadratic_equation_coefficients()
+# 1 0x0041C62F in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 13:08:55, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 30 2023 13:28:13
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe, файл: input_of_quadratic_equation_coefficients.cpp, строка: 31, функция: void input_of_quadratic_equation_coefficients(double*, double*, double*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "a_address == nullptr || b_address == nullptr || c_address == nullptr".
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x0055369C (32-bit), Flags: Cmdre0, Thread: 0x53D4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00438F15 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: input_of_quadratic_equation_coefficients()
+# 1 0x0041C62F in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 13:28:56, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 30 2023 13:31:06
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe, файл: input_of_quadratic_equation_coefficients.cpp, строка: 31, функция: void input_of_quadratic_equation_coefficients(double*, double*, double*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "a_address == nullptr || b_address == nullptr || c_address == nullptr".
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x0055369C (32-bit), Flags: Cmdre0, Thread: 0x2044 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00438F15 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: input_of_quadratic_equation_coefficients()
+# 1 0x0041C62F in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 13:28:56, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 30 2023 13:31:29
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe, файл: input_of_quadratic_equation_coefficients.cpp, строка: 31, функция: void input_of_quadratic_equation_coefficients(double*, double*, double*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "a_address == nullptr || b_address == nullptr || c_address == nullptr".
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x0055369C (32-bit), Flags: Cmdre0, Thread: 0x2FA4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00438F15 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: input_of_quadratic_equation_coefficients()
+# 1 0x0041C62F in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 13:28:56, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 30 2023 13:36:18
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe, файл: input_of_quadratic_equation_coefficients.cpp, строка: 31, функция: void input_of_quadratic_equation_coefficients(double*, double*, double*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "a_address == nullptr || b_address == nullptr || c_address == nullptr".
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x0055369C (32-bit), Flags: Cmdre0, Thread: 0x23C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00438F15 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: input_of_quadratic_equation_coefficients()
+# 1 0x0041C62F in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 13:37:23, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 30 2023 13:37:31
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe, файл: input_of_quadratic_equation_coefficients.cpp, строка: 31, функция: void input_of_quadratic_equation_coefficients(double*, double*, double*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "a_address == nullptr || b_address == nullptr || c_address == nullptr".
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x0055369C (32-bit), Flags: Cmdre0, Thread: 0x22E8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00438F09 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: input_of_quadratic_equation_coefficients()
+# 1 0x0041C623 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 13:37:23, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 30 2023 13:38:35
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe, файл: input_of_quadratic_equation_coefficients.cpp, строка: 31, функция: void input_of_quadratic_equation_coefficients(double*, double*, double*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "a_address == nullptr || b_address == nullptr || c_address == nullptr".
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x0055369C (32-bit), Flags: Cmdre0, Thread: 0x4D30 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00438F09 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: input_of_quadratic_equation_coefficients()
+# 1 0x0041C623 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 13:37:23, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 30 2023 13:39:20
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe, файл: input_of_quadratic_equation_coefficients.cpp, строка: 31, функция: void input_of_quadratic_equation_coefficients(double*, double*, double*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "a_address == nullptr || b_address == nullptr || c_address == nullptr".
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x0055369C (32-bit), Flags: Cmdre0, Thread: 0x5B94 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00438F09 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: input_of_quadratic_equation_coefficients()
+# 1 0x0041C623 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 13:37:23, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 30 2023 13:44:12
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe, файл: input_of_quadratic_equation_coefficients.cpp, строка: 31, функция: void input_of_quadratic_equation_coefficients(double*, double*, double*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "a_address == nullptr || b_address == nullptr || c_address == nullptr".
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x0055369C (32-bit), Flags: Cmdre0, Thread: 0x5660 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00438F09 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: input_of_quadratic_equation_coefficients()
+# 1 0x0041C623 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 13:37:23, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 30 2023 13:49:56
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe, файл: input_of_quadratic_equation_coefficients.cpp, строка: 31, функция: void input_of_quadratic_equation_coefficients(double*, double*, double*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "a_address == nullptr || b_address == nullptr || c_address == nullptr".
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x0055369C (32-bit), Flags: Cmdre0, Thread: 0x31B4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00438F15 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: input_of_quadratic_equation_coefficients()
+# 1 0x0041C62F in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 13:37:23, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 30 2023 13:51:01
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x0055369C (32-bit), Flags: Cmdre0, Thread: 0x6074 (Main), GetLastError(): 109 (Канал был закрыт). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427500 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: (anonymous namespace)::TX::_txOnSignal()
+# 1 0x76528553 in C:\Windows\System32\msvcrt.dll: raise()
+# 2 0x7652CA3B in C:\Windows\System32\msvcrt.dll: abort()
+# 3 0x765293A7 in C:\Windows\System32\msvcrt.dll: assert()
+# 4 0x0041DCF1 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: solve_quadratic_equation()
+# 5 0x0041C671 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 15:42:56, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 30 2023 15:44:05
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x0055369C (32-bit), Flags: Cmdre0, Thread: 0x19FC (Main), GetLastError(): 109 (Канал был закрыт). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427500 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: (anonymous namespace)::TX::_txOnSignal()
+# 1 0x76528553 in C:\Windows\System32\msvcrt.dll: raise()
+# 2 0x7652CA3B in C:\Windows\System32\msvcrt.dll: abort()
+# 3 0x765293A7 in C:\Windows\System32\msvcrt.dll: assert()
+# 4 0x0041DCF1 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: solve_quadratic_equation()
+# 5 0x0041C671 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 15:50:53, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 30 2023 15:51:27
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x0055369C (32-bit), Flags: Cmdre0, Thread: 0x5930 (Main), GetLastError(): 109 (Канал был закрыт). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427500 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: (anonymous namespace)::TX::_txOnSignal()
+# 1 0x76528553 in C:\Windows\System32\msvcrt.dll: raise()
+# 2 0x7652CA3B in C:\Windows\System32\msvcrt.dll: abort()
+# 3 0x765293A7 in C:\Windows\System32\msvcrt.dll: assert()
+# 4 0x0041DCF1 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: solve_quadratic_equation()
+# 5 0x0041C671 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 15:54:29, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 30 2023 15:54:40
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe, файл: input_of_quadratic_equation_coefficients.cpp, строка: 74, функция: void input_of_quadratic_equation_coefficients(double*, double*, double*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 && "Программа так не работает!!! Она не считывает данные через echo!!!!"".
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x0055369C (32-bit), Flags: Cmdre0, Thread: 0x5958 (Main), GetLastError(): 109 (Канал был закрыт). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00439045 in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: input_of_quadratic_equation_coefficients()
+# 1 0x0041C62F in C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 15:59:36, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 30 2023 15:59:47
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_main.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------

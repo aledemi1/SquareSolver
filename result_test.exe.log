@@ -68,3 +68,96 @@ Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_test.exe
 Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_test.exe, файл: test.cpp, строка: 69, функция: int main(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "!(((sizeof (all_data[n_tests].number_of_roots) == sizeof (float) ? __fpclassifyf (all_data[n_tests].number_of_roots) : sizeof (all_data[n_tests].number_of_roots) == sizeof (double) ? __fpclassify (all_data[n_tests].number_of_roots) : __fpclassifyl (all_data[n_tests].number_of_roots)) & 0x0100) == 0) && "Ошбка при прочтении файла"".
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x004F32FC (32-bit), Flags: Cmdre0, Thread: 0x3DC4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041C81A in C:\Users\Alex\Documents\GitHub\SquareSolver\result_test.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 16:32:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 30 2023 16:32:51
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_test.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_test.exe, файл: test.cpp, строка: 69, функция: int main(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "!(((sizeof (all_data[n_tests].number_of_roots) == sizeof (float) ? __fpclassifyf (all_data[n_tests].number_of_roots) : sizeof (all_data[n_tests].number_of_roots) == sizeof (double) ? __fpclassify (all_data[n_tests].number_of_roots) : __fpclassifyl (all_data[n_tests].number_of_roots)) & 0x0100) == 0) && "Ошбка при прочтении файла"".
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x004F32FC (32-bit), Flags: Cmdre0, Thread: 0x2D40 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041C81A in C:\Users\Alex\Documents\GitHub\SquareSolver\result_test.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 16:32:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 30 2023 16:33:07
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_test.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Alex\Documents\GitHub\SquareSolver\result_test.exe, файл: test.cpp, строка: 69, функция: int main(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "!(((sizeof (all_data[n_tests].number_of_roots) == sizeof (float) ? __fpclassifyf (all_data[n_tests].number_of_roots) : sizeof (all_data[n_tests].number_of_roots) == sizeof (double) ? __fpclassify (all_data[n_tests].number_of_roots) : __fpclassifyl (all_data[n_tests].number_of_roots)) & 0x0100) == 0) && "Ошбка при прочтении файла"".
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x004F32FC (32-bit), Flags: Cmdre0, Thread: 0x2E30 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041C81A in C:\Users\Alex\Documents\GitHub\SquareSolver\result_test.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\alex\mipt\programming\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 16:34:47, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 30 2023 16:34:54
+
+Run file:	C:\Users\Alex\Documents\GitHub\SquareSolver\result_test.exe
+Directory:	C:\Users\Alex\Documents\GitHub\SquareSolver
+
+--------------------------------------------------
